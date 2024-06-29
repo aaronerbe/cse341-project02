@@ -5,7 +5,8 @@ const doc = {
         title: 'Boat Rental API',
         description: 'API Assignment CSE341 - Project02'
     },
-    host: 'localhost:8080',
+    host: 'cse341-project02-awbw.onrender.com',
+    schemes: ['https'],
     definitions: {
         CreateOwner: {
             firstName: 'Aaron',

@@ -6,13 +6,13 @@
 
 ///OWNERS
 ### GET all owners
-GET http://localhost:8080/owners/
+GET http://cse341-project02-awbw.onrender.com/owners/
 
 ### GET owner by ID
-GET http://localhost:8080/owners/650c5812c06bc031e32200a1
+GET http://cse341-project02-awbw.onrender.com/owners/650c5812c06bc031e32200a1
 
 ### CREATE New owner
-POST http://localhost:8080/owners HTTP/1.1
+POST http://cse341-project02-awbw.onrender.com/owners HTTP/1.1
 Content-Type: application/json
 
 {
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### UPDATE Existing User
-PUT http://localhost:8080/owners/667ed324bf82f7d4f778e75a HTTP/1.1
+PUT http://cse341-project02-awbw.onrender.com/owners/667ed324bf82f7d4f778e75a HTTP/1.1
 Content-Type: application/json
 
 {
@@ -34,20 +34,20 @@ Content-Type: application/json
 }
 
 ### DELETE Existing User
-DELETE http://localhost:8080/owners/667ed324bf82f7d4f778e75a HTTP/1.1
+DELETE http://cse341-project02-awbw.onrender.com/owners/667ed324bf82f7d4f778e75a HTTP/1.1
 
 
 
 
 ///////////////////////////BOATS
 ### GET all boats
-GET http://localhost:8080/boats/
+GET http://cse341-project02-awbw.onrender.com/boats/
 
 ### GET boat by ID
-GET http://localhost:8080/boats/650c5812c06bc031e32200b1
+GET http://cse341-project02-awbw.onrender.com/boats/650c5812c06bc031e32200b1
 
 ### CREATE New boat
-POST http://localhost:8080/boats HTTP/1.1
+POST http://cse341-project02-awbw.onrender.com/boats HTTP/1.1
 Content-Type: application/json
 
 {
@@ -62,7 +62,7 @@ Content-Type: application/json
 }
 
 ### UPDATE Existing boat
-PUT http://localhost:8080/boats/667ed3f99e6a8c4e72c5ac2c HTTP/1.1
+PUT http://cse341-project02-awbw.onrender.com/boats/667ed3f99e6a8c4e72c5ac2c HTTP/1.1
 Content-Type: application/json
 
 {
@@ -77,14 +77,14 @@ Content-Type: application/json
 }
 
 ### DELETE Existing boat
-DELETE http://localhost:8080/boats/667ed3f99e6a8c4e72c5ac2c HTTP/1.1
+DELETE http://cse341-project02-awbw.onrender.com/boats/667ed3f99e6a8c4e72c5ac2c HTTP/1.1
 
 
 
 ///////////ERROR HANDLING
 //////////BOATS
 ### CREATE Bad User ID
-POST http://localhost:8080/boats HTTP/1.1
+POST http://cse341-project02-awbw.onrender.com/boats HTTP/1.1
 Content-Type: application/json
 
 {
@@ -99,7 +99,7 @@ Content-Type: application/json
 }
 
 ### UPDATE Bad User ID
-PUT http://localhost:8080/boats/650c5812c06bc031e32200b1 HTTP/1.1
+PUT http://cse341-project02-awbw.onrender.com/boats/650c5812c06bc031e32200b1 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -114,10 +114,10 @@ Content-Type: application/json
 }
 
 ### GET boat by BAD BOAT ID
-GET http://localhost:8080/boats/667e24a65200e4c3adb9e268
+GET http://cse341-project02-awbw.onrender.com/boats/667e24a65200e4c3adb9e268
 
 ### UPDATE BAD boat ID
-PUT http://localhost:8080/boats/667e24a65200e4c3adb9e268 HTTP/1.1
+PUT http://cse341-project02-awbw.onrender.com/boats/667e24a65200e4c3adb9e268 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -132,14 +132,14 @@ Content-Type: application/json
 }
 
 ### DELETE bad Boat ID
-DELETE http://localhost:8080/boats/667e24a65200e4c3adb9e268 HTTP/1.1
+DELETE http://cse341-project02-awbw.onrender.com/boats/667e24a65200e4c3adb9e268 HTTP/1.1
 
 ///////////OWNERS
 ### GET owner by ID
-GET http://localhost:8080/owners/650c5812c06bc031e32200b1
+GET http://cse341-project02-awbw.onrender.com/owners/650c5812c06bc031e32200b1
 
 ### UPDATE Existing User
-PUT http://localhost:8080/owners/650c5812c06bc031e32200b1 HTTP/1.1
+PUT http://cse341-project02-awbw.onrender.com/owners/650c5812c06bc031e32200b1 HTTP/1.1
 Content-Type: application/json
 
 {
