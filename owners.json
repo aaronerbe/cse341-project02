@@ -1,0 +1,47 @@
+[
+{
+    "_id": {
+    "$oid": "650c5812c06bc031e32200a1"
+    },
+    "firstName": "Bill",
+    "lastName": "Gates",
+    "email": "billgates@test.com",
+    "password": "Password1!"
+},
+{
+    "_id": {
+    "$oid": "6338cf4fc51624e0408341bc"
+    },
+    "firstname": "Bob",
+    "lastname": "Barker",
+    "email": "bob@example.com",
+    "password": "Password2!"
+},
+{
+    "_id": {
+    "$oid": "650c5812c06bc031e32200a2"
+    },
+    "firstName": "Sarah",
+    "lastName": "Birch",
+    "email": "test@gmail.com",
+    "password": "Password3!"
+},
+{
+    "_id": {
+    "$oid": "650c5812c06bc031e32200a3"
+    },
+    "firstName": "Larry",
+    "lastName": "Ellison",
+    "email": "larryellison@test.com",
+    "password": "Password4!"
+},
+{
+    "_id": {
+    "$oid": "6338d07ec51624e0408341bd"
+    },
+    "firstname": "Adam",
+    "lastname": "Sandler",
+    "email": "adam@example.com",
+    "password": "Password5!"
+}
+]

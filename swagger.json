@@ -1,0 +1,419 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Boat Rental API",
+    "description": "API Assignment CSE341 - Project02",
+    "version": "1.0.0"
+  },
+  "host": "localhost:8080",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/owners/": {
+      "get": {
+        "tags": [
+          "Owners"
+        ],
+        "summary": "Retrieve a list of all owners",
+        "description": "This endpoint retrieves all owners available in the database.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Owners"
+        ],
+        "summary": "Create a new owner",
+        "description": "This endpoint creates a new owner in the database.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Add new user.",
+            "schema": {
+              "$ref": "#/definitions/CreateOwner"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/owners/{id}": {
+      "get": {
+        "tags": [
+          "Owners"
+        ],
+        "summary": "Get an owner by ID",
+        "description": "This endpoint retrieves a specific owner by its ID.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "value": "650c5812c06bc031e32200a1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Owners"
+        ],
+        "summary": "Update an existing owner",
+        "description": "This endpoint updates an existing owner in the database.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Add new user.",
+            "schema": {
+              "$ref": "#/definitions/UpdateOwner"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Owners"
+        ],
+        "summary": "Delete an owner",
+        "description": "This endpoint deletes a specific owner by its ID from the database.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    },
+    "/boats/": {
+      "get": {
+        "tags": [
+          "Boats"
+        ],
+        "summary": "Retrieve a list of all boats",
+        "description": "This endpoint retrieves all boats available in the database.",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Boats"
+        ],
+        "summary": "Create a new boat",
+        "description": "This endpoint creates a new boat in the database.",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Add new user.",
+            "schema": {
+              "$ref": "#/definitions/CreateBoat"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/boats/{id}": {
+      "get": {
+        "tags": [
+          "Boats"
+        ],
+        "summary": "Get a boat by ID",
+        "description": "This endpoint retrieves a specific boat by its ID.",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "value": "650c5812c06bc031e32200b1"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Boats"
+        ],
+        "summary": "Update an existing boat",
+        "description": "This endpoint updates an existing boat in the database.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Add new user.",
+            "schema": {
+              "$ref": "#/definitions/UpdateBoat"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Boats"
+        ],
+        "summary": "Delete a boat",
+        "description": "This endpoint deletes a specific boat by its ID from the database.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CreateOwner": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "example": "Aaron"
+        },
+        "lastName": {
+          "type": "string",
+          "example": "Erbe"
+        },
+        "email": {
+          "type": "string",
+          "example": "aerbe@example.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "Password1!"
+        }
+      }
+    },
+    "UpdateOwner": {
+      "type": "object",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "example": "A-Aron"
+        },
+        "lastName": {
+          "type": "string",
+          "example": "Erbe"
+        },
+        "email": {
+          "type": "string",
+          "example": "aerbe@example.com"
+        },
+        "password": {
+          "type": "string",
+          "example": "NewPassword1!"
+        }
+      }
+    },
+    "CreateBoat": {
+      "type": "object",
+      "properties": {
+        "ownerId": {
+          "type": "string",
+          "example": "650c5812c06bc031e32200a1"
+        },
+        "name": {
+          "type": "string",
+          "example": "Leopard Catamaran"
+        },
+        "type": {
+          "type": "string",
+          "example": "Sailboat"
+        },
+        "description": {
+          "type": "string",
+          "example": "Blue Water Sailing Catamaran"
+        },
+        "location": {
+          "type": "string",
+          "example": "Annapolis"
+        },
+        "pricePerDay": {
+          "type": "number",
+          "example": 800
+        },
+        "features": {
+          "type": "array",
+          "example": [
+            "GPS",
+            "Anchor",
+            "Code Zero",
+            "Dingy"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "amenities": {
+          "type": "array",
+          "example": [
+            "Kitchen",
+            "3 Bath",
+            "Master Suite",
+            "3 Bedroom"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "UpdateBoat": {
+      "type": "object",
+      "properties": {
+        "ownerId": {
+          "type": "string",
+          "example": "650c5812c06bc031e32200a1"
+        },
+        "name": {
+          "type": "string",
+          "example": "Leopard Catamaran"
+        },
+        "type": {
+          "type": "string",
+          "example": "Sailboat"
+        },
+        "description": {
+          "type": "string",
+          "example": "Coastal Sailing Catamaran"
+        },
+        "location": {
+          "type": "string",
+          "example": "Miami"
+        },
+        "pricePerDay": {
+          "type": "number",
+          "example": 800
+        },
+        "features": {
+          "type": "array",
+          "example": [
+            "GPS",
+            "Anchor",
+            "Code Zero",
+            "Dingy"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "amenities": {
+          "type": "array",
+          "example": [
+            "Kitchen",
+            "3 Bath",
+            "Master Suite",
+            "3 Bedroom"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
