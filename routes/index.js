@@ -11,7 +11,7 @@ const passport = require('passport');
 //});
 
 //not sure about this ./swagger tied to root
-//router.use('/', require('./swagger'));
+router.use('/', require('./swagger'));
 router.use('/swagger', require('./swagger'));
 router.use('/owners', require('./owners')); 
 router.use('/boats', require('./boats')); 
