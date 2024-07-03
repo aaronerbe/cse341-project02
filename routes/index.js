@@ -2,6 +2,9 @@ const router = require('express').Router();
 const passport = require('passport');
 
 router.get('/', (req, res, next) => {
+    //#swagger.tags=['Root']
+    //#swagger.summary='api-docs redirect'
+    //#swagger.description='Currently Root is set to redirect to /api-docs for convenience'
     //res.send('Boat Rentals');//
     res.redirect('api-docs')
 });
@@ -12,9 +15,17 @@ router.use('/owners', require('./owners'));
 router.use('/boats', require('./boats')); 
 
 //login/logout
-router.get('/login', passport.authenticate('github'), (req, res) => {});
+router.get(
+    //#swagger.tags=['Authentication']
+    //#swagger.summary='Authenticate User using Github'
+    //#swagger.description='This endpoint is used to login.'
+    '/login', passport.authenticate('github'), (req, res) => {});
 
-router.get('/logout', function (req, res, next) {
+router.get(
+    //#swagger.tags=['Authentication']
+    //#swagger.summary='Logout Authenticated User'
+    //#swagger.description='This endpoint is used to logout.'
+    '/logout', function (req, res, next) {
     req.logout(function(err) {
         if (err) {
             return next(err);

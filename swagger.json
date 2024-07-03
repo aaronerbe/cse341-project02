@@ -13,10 +13,42 @@
   "paths": {
     "/": {
       "get": {
-        "description": "",
+        "tags": [
+          "Root"
+        ],
+        "summary": "api-docs redirect",
+        "description": "Currently Root is set to redirect to /api-docs for convenience",
         "responses": {
-          "200": {
-            "description": "OK"
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/login": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "Authenticate User using Github",
+        "description": "This endpoint is used to login.",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "Logout Authenticated User",
+        "description": "This endpoint is used to logout.",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
@@ -56,6 +88,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "422": {
             "description": "Unprocessable Entity"
@@ -117,6 +152,9 @@
           "204": {
             "description": "No Content"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "422": {
             "description": "Unprocessable Entity"
           }
@@ -139,6 +177,9 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
@@ -178,6 +219,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
           },
           "422": {
             "description": "Unprocessable Entity"
@@ -239,6 +283,9 @@
           "204": {
             "description": "No Content"
           },
+          "401": {
+            "description": "Unauthorized"
+          },
           "422": {
             "description": "Unprocessable Entity"
           }
@@ -261,6 +308,9 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
           }
         }
       }
