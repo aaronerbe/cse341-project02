@@ -1,8 +1,8 @@
 const express = require('express');
 const mongodb = require('./db/database');
 const bodyParser = require('body-parser');
-const swaggerUI = require('swagger-ui-express');
-const swaggerDocument = require('./swagger.json');
+//const swaggerUI = require('swagger-ui-express');
+//const swaggerDocument = require('./swagger.json');
 const createError = require('http-errors');
 const passport = require('passport');
 const session = require('express-session');
@@ -13,7 +13,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 // Middleware
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
+//app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 app.use(bodyParser.json());
 app.use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH'], origin: "*" }));
 app.use(session({

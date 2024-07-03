@@ -1,18 +1,21 @@
 const router = require('express').Router();
 const passport = require('passport');
 
-router.get('/', (req, res, next) => {
-    //#swagger.tags=['Root']
-    //#swagger.summary='api-docs redirect'
-    //#swagger.description='Currently Root is set to redirect to /api-docs for convenience'
-    //res.send('Boat Rentals');//
-    res.redirect('api-docs')
-});
+//removing this so you can see the logged in or logged out message (see server.js)
+//router.get('/', (req, res, next) => {
+//    //#swagger.tags=['Root']
+//    //#swagger.summary='api-docs redirect'
+//    //#swagger.description='Currently Root is set to redirect to /api-docs for convenience'
+//    res.send('Boat Rentals');
+//    //res.redirect('api-docs')
+//});
 
 //not sure about this ./swagger tied to root
 //router.use('/', require('./swagger'));
+router.use('/swagger', require('./swagger'));
 router.use('/owners', require('./owners')); 
 router.use('/boats', require('./boats')); 
+
 
 //login/logout
 router.get(

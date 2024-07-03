@@ -11,20 +11,6 @@
     "https"
   ],
   "paths": {
-    "/": {
-      "get": {
-        "tags": [
-          "Root"
-        ],
-        "summary": "api-docs redirect",
-        "description": "Currently Root is set to redirect to /api-docs for convenience",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/login": {
       "get": {
         "tags": [
